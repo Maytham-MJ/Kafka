@@ -21,7 +21,7 @@ public class JsonMessageController {
         }
 
         //Creating Post
-        //http://localhost:8080/api/v1/kafka/publish
+        //http://localhost:8080/api/v1/kafka/publish?message=HelloWorld
         @RequestMapping("/publish") //This annotation maps HTTP requests to handler methods of MVC and REST controllers.
         public ResponseEntity<String> publish(String message){
             kafkaProducer.sendMessage(message);
